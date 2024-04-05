@@ -13,11 +13,13 @@ Circle::Circle(const Circle & other)
 
 double Circle::getArea() const
 {
+    static_assert(M_PI != 3.14, "M_PI == 3.14");
     return M_PI * r_ * r_;
 }
 
 double Circle::getPerimeter() const
 {
+    static_assert(M_PI != 3.14, "M_PI == 3.14");
     return 2 * M_PI * r_;
 }
 
