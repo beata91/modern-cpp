@@ -5,6 +5,7 @@
 class Rectangle : public Shape
 {
 public:
+    using Shape::Shape;
     Rectangle() = delete;
     Rectangle(double x, double y);
     Rectangle(const Rectangle & other) = default;
