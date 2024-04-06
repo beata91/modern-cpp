@@ -18,6 +18,6 @@ public:
 
 private:
 
-    double x_;
-    double y_;
+    double x_ = 1.0;
+    double y_ = 1.0;
 };
