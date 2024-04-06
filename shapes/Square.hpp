@@ -9,7 +9,7 @@ public:
     Square(double x);
     Square(const Square & other) = default;
 
-    double getArea();
-    double getPerimeter();
-    void print();
+    double getArea() const override;
+    double getPerimeter() const override;
+    void print() const override;
 };
