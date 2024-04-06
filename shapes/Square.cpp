@@ -20,5 +20,5 @@ void Square::print() const
     std::cout << "Square:      x: " << getX() << std::endl
               << "          area: " << getArea() << std::endl
               << "     perimeter: " << getPerimeter() << std::endl
-              << "     colour: " << static_cast<int>(getColour()) << std::endl;
+              << "        colour: " << static_cast<int>(getColour()) << std::endl;
 }
