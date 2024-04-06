@@ -16,6 +16,7 @@ public:
     virtual double getArea() const = 0;
     virtual double getPerimeter() const = 0;
     virtual void print() const;
+    virtual Colour getColour() const;
 
 private:
     Colour colour = Colour::Pink;
