@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <string>
 #include <memory>
+#include <unordered_map>
 #include "Shape.hpp"
 #include "Rectangle.hpp"
 #include "Square.hpp"
@@ -75,8 +76,8 @@ constexpr int fibonacci (int a)
 
 int main()
 {
-    constexpr int fib = fibonacci(45);
-    std::cout <<  "fib: " << fib << std::endl;
+//    constexpr int fib = fibonacci(45);
+//    std::cout <<  "fib: " << fib << std::endl;
 
     Collection shapes{make_shared<Circle>(2.0),
                       make_shared<Circle>(3.0),
@@ -107,6 +108,17 @@ int main()
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");
 
     std::cout << "alignof(Circle): " << alignof(Circle) << std::endl;
+
+    std::unordered_map<std::shared_ptr<Shape>, double> perimeters;
+    for ( const auto& el : shapes) {
+        if (el) {
+            perimeters.insert({el, el->getPerimeter()});
+        }
+    }
+
+    for (const auto& [key, value] : perimeters) {
+        std::cout << "Shape: " << key->getName() << ". " << "Perimeter: " << value << "." << std::endl;
+    }
 
     return 0;
 }
