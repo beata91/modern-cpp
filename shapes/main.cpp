@@ -63,8 +63,21 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
     }
 }
 
+constexpr int fibonacci (int a)
+{
+    if (a <= 2) {
+        return 1;
+    }
+    else {
+        return fibonacci(a-2) + fibonacci(a-1);
+    }
+}
+
 int main()
 {
+    constexpr int fib = fibonacci(45);
+    std::cout <<  "fib: " << fib << std::endl;
+
     Collection shapes{make_shared<Circle>(2.0),
                       make_shared<Circle>(3.0),
                       nullptr,
