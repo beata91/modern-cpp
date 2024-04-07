@@ -14,6 +14,7 @@ public:
     double getPerimeter() const override;
     double getRadius() const;
     void print() const override;
+    std::string getName() const override;
 
 private:
     double r_ = 1.0;

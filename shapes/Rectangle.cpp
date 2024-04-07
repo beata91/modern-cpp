@@ -34,3 +34,8 @@ void Rectangle::print() const
               << "     perimeter: " << getPerimeter() << std::endl
               << "        colour: " << static_cast<int>(getColour()) << std::endl;
 }
+
+std::string Rectangle::getName() const
+{
+    return "Rectangle";
+}

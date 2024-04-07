@@ -22,3 +22,8 @@ void Square::print() const
               << "     perimeter: " << getPerimeter() << std::endl
               << "        colour: " << static_cast<int>(getColour()) << std::endl;
 }
+
+std::string Square::getName() const
+{
+    return "Square";
+}

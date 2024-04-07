@@ -30,3 +30,8 @@ void Circle::print() const
               << "     perimeter: " << getPerimeter() << std::endl
               << "        colour: " << static_cast<int>(getColour()) << std::endl;
 }
+
+std::string Circle::getName() const
+{
+    return "Circle";
+}

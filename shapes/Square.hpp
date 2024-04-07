@@ -13,4 +13,5 @@ public:
     double getArea() const noexcept override;
     double getPerimeter() const noexcept override;
     void print() const override;
+    std::string getName() const override;
 };

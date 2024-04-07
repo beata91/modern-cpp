@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 enum class Colour : unsigned char {
     Green,
@@ -17,6 +18,7 @@ public:
     virtual double getPerimeter() const = 0;
     virtual void print() const;
     virtual Colour getColour() const;
+    virtual std::string getName() const;
 
 private:
     Colour colour = Colour::Pink;

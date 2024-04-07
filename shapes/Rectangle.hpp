@@ -15,6 +15,7 @@ public:
     virtual double getX() const final;
     double getY() const;
     void print() const override;
+    std::string getName() const override;
 
 private:
 
